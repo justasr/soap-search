@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+
+<input type="hidden" id="server_url" value="http://joboffer.justinas-ruika.com/web/server.php"  />
+<div class="container">
+
+    <h1> Protologas Užduotis </h1>
+
+    <div class="row">
+
+        <!-- Search !-->
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3> Search </h3>
+                    <form id="search" role="form">
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="searchType" id="authorRadio" value="1" checked>
+                                Search For Authors
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="searchType" id="bookRadio" value="2">
+                                Search For Books
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author">Author</label>
+                            <input class="form-control" name="author" id="author" type="text" value="" placeholder="Author" />
+                        </div>
+                        <div class="form-group">
+                            <label for="birthdate">Birthdate</label>
+                            <input class="form-control" name="birthdate" id="birthdate" type="text" value="" placeholder="Birthdate" />
+                        </div>
+                        <div class="form-group">
+                            <label for="bookTitle">Book Title</label>
+                            <input class="form-control" name="bookTitle" id="bookTitle" type="text" value="" placeholder="Book Title" />
+                        </div>
+                        <div class="form-group">
+                            <label for="isbn">ISBN</label>
+                            <input class="form-control" name="isbn" id="isbn" type="text" value="" placeholder="ISBN" />
+                        </div>
+                        <div class="form-group">
+                            <label for="theme">Theme</label>
+                            <input class="form-control" name="theme" id="theme" type="text" value="" placeholder="Theme" />
+                        </div>
+                        <button type="submit" id="doSearch" class="btn btn-default">Search</button>
+                    </form>
+                </div>
+                <div style="display:none" id="searchCon" class="col-sm-12" >
+                    <h3> Search Results: </h3>
+                    <div id="searchResults">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- All Data !-->
+        <div  class="col-md-6">
+            <h3> All Database Data </h3>
+            <div id="database_data">
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="assets/javascript/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/javascript/main.js"></script>
+</body>
+</html>
